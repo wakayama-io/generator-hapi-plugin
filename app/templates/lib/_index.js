@@ -32,7 +32,7 @@ exports.register = function(plugin, options, next) {
     method: 'GET',
     path: '/hello',
     handler: function(request, reply) {
-      reply('hello world');
+      reply('don\'t worry, be hapi!');
     }
   });
 
