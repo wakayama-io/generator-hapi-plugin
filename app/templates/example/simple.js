@@ -8,18 +8,11 @@
 
 'use strict';
 
-// Following the 'Node.js require(s) best practices' by
-// http://www.mircozeiss.com/node-js-require-s-best-practices/
+var Hapi = require('hapi');
 
-// // Nodejs libs
-// var fs = require('fs'),
-//
-// // External libs
-// debug = require('debug'),
-//
-// // Internal libs
-// data = require('./data.js');
+var server = new Hapi.Server('localhost', 8000);
 
-var <%= safeSlugname %> = require('../');
-
-<%= safeSlugname %>.awesome(); // "awesome"
+server.pack.require('../', function() {
+    server.start();
+    console.log('Server running at ' + server.info.uri);
+});

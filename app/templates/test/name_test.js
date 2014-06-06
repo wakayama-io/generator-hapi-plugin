@@ -24,7 +24,7 @@ describe('<%= safeSlugname %>', function() {
     var table = server.table();
 
     expect(table).to.have.length(1);
-    expect(table[0].path).to.equal('/hello');
+    expect(table[0].path).to.equal('/');
 
     done();
   });
@@ -33,11 +33,11 @@ describe('<%= safeSlugname %>', function() {
     var table = server.table();
 
     expect(table).to.have.length(1);
-    expect(table[0].path).to.equal("/hello");
+    expect(table[0].path).to.equal("/");
 
     var request = {
       method: 'GET',
-      url: '/hello'
+      url: '/'
     };
 
     server.inject(request, function(res) {

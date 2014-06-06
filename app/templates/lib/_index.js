@@ -30,7 +30,7 @@ exports.register = function(plugin, options, next) {
 
   plugin.route({
     method: 'GET',
-    path: '/hello',
+    path: '/',
     handler: function(request, reply) {
       reply('don\'t worry, be hapi!');
     }
