@@ -1,0 +1,60 @@
+{
+  "name": "generator-hapi-plugin",
+  "description": "A hapi.js plugin generator for Yeoman",
+  "version": "0.0.2",
+  "homepage": "https://github.com/kwakayama/generator-hapi-plugin",
+  "bugs": "https://github.com/kwakayama/generator-hapi-plugin/issues",
+  "license": "MIT",
+  "main": "app/index.js",
+  "author": {
+    "name": "Kentaro Wakayama",
+    "email": "wakayama.kentaro@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kwakayama/generator-hapi-plugin"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "hapi",
+    "plugin",
+    "node"
+  ],
+  "dependencies": {
+    "chalk": "^0.4.0",
+    "npm-latest": "^0.2.0",
+    "npm-name": "^0.1.0",
+    "yeoman-generator": "^0.16.0",
+    "yosay": "^0.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-util": "2.2.16",
+    "gulp-bump": "^0.1.8",
+    "gulp-jscs": "^0.4.2",
+    "gulp-jshint": "^1.5.5",
+    "gulp-mocha": "^0.4.1",
+    "gulp-istanbul": "^0.2.0",
+    "coveralls": "^2.10.0",
+    "should": "^3.3.1",
+    "jshint-stylish": "^0.2.0",
+    "gulp-load-plugins": "^0.5.1",
+    "gulp-plumber": "^0.6.2"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.3"
+  },
+  "scripts": {
+    "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "gulp test"
+  },
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "files": [
+    "app",
+    "config.js"
+  ]
+}

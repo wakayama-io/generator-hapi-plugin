@@ -1,0 +1,48 @@
+{
+  "name": "<%= slugname %>",
+  "description": "<%= props.description %>",
+  "version": "0.0.0",<% if (props.homepage) { %>
+  "homepage": "<%= props.homepage %>",<%}%>
+  "bugs": "<%= repoUrl %>/issues",
+  "license": "<%= props.license %>",
+  "main": "index",
+  "author": {
+    "name": "<%= props.authorName %>"<% if (props.authorEmail) { %>,
+    "email": "<%= props.authorEmail %>"<% } %><% if (props.authorUrl) { %>,
+    "url": "<%= props.authorUrl %>"<% } %>
+  },
+  "repository": {
+    "type": "git",
+    "url": "<%= repoUrl %>"
+  },
+  "keywords":[
+    "hapi",
+    "plugin"
+  ],
+  "dependencies": {<% if (dependencies) { %>
+<%= dependencies %>
+  <% } %>},
+  "devDependencies": {
+    "gulp": "^3.6.2",<% if (releaseModule) { %>
+    "gulp-util": "2.2.16",
+    "gulp-bump": "^0.1.8",<% } %><% if (jscsModule) { %>
+    "gulp-jscs": "^0.4.2",<% } %>
+    "gulp-jshint": "^1.5.5",
+    "should": "^3.3.1",
+    "jshint-stylish": "^0.2.0",
+    "gulp-load-plugins": "^0.5.1",
+    "gulp-plumber": "^0.6.2",
+    "gulp-lab": "0.0.7",
+    "hapi": "5.x.x",
+    "lab": "3.x.x"
+  },
+  "peerDependencies": {
+    "hapi": ">=2.x.x"
+  },
+  "engines": {
+    "node": ">=0.10.22"
+  },
+  "scripts": {
+    "test": "gulp test"
+  }
+}
