@@ -23,7 +23,7 @@ describe('node generator', function () {
     var expectedFiles = [
       'lib/index.js',
       'test/mymodule_test.js',
-      'example/simple.js',
+      'example/server.js',
       '.gitignore',
       '.jshintrc',
       '.travis.yml',
@@ -65,7 +65,7 @@ describe('node generator', function () {
     var expectedFiles = [
       'lib/index.js',
       'test/mymodule_test.js',
-      'example/simple.js',
+      'example/server.js',
       '.gitignore',
       '.jshintrc',
       '.travis.yml',
@@ -103,7 +103,7 @@ describe('node generator', function () {
     var expectedFiles = [
       'lib/index.js',
       'test/mymodule_test.js',
-      'example/simple.js',
+      'example/server.js',
       '.gitignore',
       '.jshintrc',
       '.travis.yml',
@@ -140,7 +140,7 @@ describe('node generator', function () {
     var expectedFiles = [
       'lib/index.js',
       'test/mymodule_test.js',
-      'example/simple.js',
+      'example/server.js',
       '.gitignore',
       '.jshintrc',
       '.jscs.json',
@@ -174,9 +174,9 @@ describe('node generator', function () {
     });
   });
 
-  it('generator with package lodash', function (done) {
+  it('generator with package lout', function (done) {
     var expectedContent = [
-      ['package.json', /"lodash"/]
+      ['package.json', /"lout"/]
     ];
 
     helpers.mockPrompt(this.app, {
@@ -187,7 +187,7 @@ describe('node generator', function () {
       'authorName': 'Octo Cat',
       'authorEmail': 'octo@example.com',
       'modules': [],
-      'dependencies': ['lodash']
+      'dependencies': ['lout']
     });
 
     this.app.run({}, function () {
@@ -196,9 +196,9 @@ describe('node generator', function () {
     });
   });
 
-  it('generator with package q', function (done) {
+  it('generator with package joi', function (done) {
     var expectedContent = [
-      ['package.json', /"q"/]
+      ['package.json', /"joi"/]
     ];
 
     helpers.mockPrompt(this.app, {
@@ -209,7 +209,7 @@ describe('node generator', function () {
       'authorName': 'Octo Cat',
       'authorEmail': 'octo@example.com',
       'modules': [],
-      'dependencies': ['q']
+      'dependencies': ['joi']
     });
 
     this.app.run({}, function () {
@@ -218,10 +218,10 @@ describe('node generator', function () {
     });
   });
 
-  it('generator with package lodash and q', function (done) {
+  it('generator with package lout and joi', function (done) {
     var expectedContent = [
-      ['package.json', /"lodash"/],
-      ['package.json', /"q"/]
+      ['package.json', /"lout"/],
+      ['package.json', /"joi"/]
     ];
 
     helpers.mockPrompt(this.app, {
@@ -232,7 +232,7 @@ describe('node generator', function () {
       'authorName': 'Octo Cat',
       'authorEmail': 'octo@example.com',
       'modules': [],
-      'dependencies': ['lodash', 'q']
+      'dependencies': ['lout', 'joi']
     });
 
     this.app.run({}, function () {

@@ -6,9 +6,9 @@ var fs = require('fs');
 var configKeys = ['githubUsername', 'authorName', 'authorEmail', 'authorUrl'];
 
 var _defaultDependencies = [
-  {name: 'lodash', description: 'A utility library'},
-  {name: 'q', description: 'A library for promises'},
-  {name: 'debug', description: 'tiny node.js debugging utility'}
+  {name: 'joi', description: 'Object schema validation'},
+  {name: 'lout', description: 'API documentation generator'},
+  {name: 'hoek', description: 'General purpose node utilities'}
 ];
 
 /**

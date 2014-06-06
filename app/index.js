@@ -243,7 +243,7 @@ module.exports = yeoman.generators.Base.extend({
     this.template('test/name_test.js', 'test/' + this.slugname + '_test.js');
 
     this.mkdir('example');
-    this.template('example/simple.js', 'example/simple.js');
+    this.template('example/server.js', 'example/server.js');
   },
 
   install: function () {
