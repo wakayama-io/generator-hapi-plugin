@@ -18,7 +18,7 @@ module.exports = yeoman.generators.Base.extend({
     var cb = this.async();
     var log = this.log;
 
-    log(yosay('Hello, and welcome to the node-gulp generator. Let\'s be awesome together!'));
+    log(yosay('Hello, and welcome to the hapi plugin generator. Let\'s be awesome together!'));
 
     var prompts = [{
       name: 'name',

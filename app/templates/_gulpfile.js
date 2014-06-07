@@ -22,19 +22,26 @@ gulp.task('lab', function () {
     .pipe(plugins.lab('-v -l -c'));
 });
 
-gulp.task('bump', ['test'], function () {
-  var bumpType = plugins.util.env.type || 'patch'; // major.minor.patch
-
-  return gulp.src(['./package.json'])
-    .pipe(plugins.bump({ type: bumpType }))
-    .pipe(gulp.dest('./'));
-});
+gulp.task('test', ['lint', 'lab']);
 
 gulp.task('watch', function () {
   gulp.run('test');
   gulp.watch(paths.watch, ['test']);
 });
 
+gulp.task('develop', function () {
+  plugins.nodemon({ script: 'example/server.js', ext: 'js'})
+    .on('change', ['test']);
+});<% if (releaseModule) { %>
+
+gulp.task('bump', ['test'], function () {
+  var bumpType = plugins.util.env.type || 'patch'; // major.minor.patch
+  return gulp.src(['./package.json'])
+    .pipe(plugins.bump({ type: bumpType }))
+    .pipe(gulp.dest('./'));
+});
+
+gulp.task('release', ['bump']);
+<% } %>
+
 gulp.task('default', ['test']);
-gulp.task('test', ['lint', 'lab']);
-<% if (releaseModule) { %>gulp.task('release', ['bump']);<% } %>

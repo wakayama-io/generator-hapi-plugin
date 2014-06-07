@@ -49,7 +49,7 @@ describe('node generator', function () {
       'license': 'MIT',
       'githubUsername': 'octocat',
       'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
+      'authorEmail': 'octo@cat.com',
       'modules': [],
       'dependencies': []
     });
@@ -76,7 +76,7 @@ describe('node generator', function () {
     ];
 
     var expectedContent = [
-      ['lib/index.js', /http:\/\/example.com/],
+      ['lib/index.js', /http:\/\/octocat.com/],
       ['package.json', /"name": "mymodule"/]
     ];
 
@@ -86,8 +86,8 @@ describe('node generator', function () {
       'license': 'MIT',
       'githubUsername': 'octocat',
       'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
-      'homepage': 'http://example.com',
+      'authorEmail': 'octo@cat.com',
+      'homepage': 'http://octocat.com',
       'modules': [],
       'dependencies': []
     });
@@ -124,7 +124,7 @@ describe('node generator', function () {
       'license': 'MIT',
       'githubUsername': 'octocat',
       'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
+      'authorEmail': 'octo@cat.com',
       'modules': ['releaseModule'],
       'dependencies': []
     });
@@ -162,7 +162,7 @@ describe('node generator', function () {
       'license': 'MIT',
       'githubUsername': 'octocat',
       'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
+      'authorEmail': 'octo@cat.com',
       'modules': ['jscsModule'],
       'dependencies': []
     });
@@ -185,7 +185,7 @@ describe('node generator', function () {
       'license': 'MIT',
       'githubUsername': 'octocat',
       'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
+      'authorEmail': 'octo@cat.com',
       'modules': [],
       'dependencies': ['lout']
     });
@@ -207,7 +207,7 @@ describe('node generator', function () {
       'license': 'MIT',
       'githubUsername': 'octocat',
       'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
+      'authorEmail': 'octo@cat.com',
       'modules': [],
       'dependencies': ['joi']
     });
@@ -230,7 +230,7 @@ describe('node generator', function () {
       'license': 'MIT',
       'githubUsername': 'octocat',
       'authorName': 'Octo Cat',
-      'authorEmail': 'octo@example.com',
+      'authorEmail': 'octo@cat.com',
       'modules': [],
       'dependencies': ['lout', 'joi']
     });

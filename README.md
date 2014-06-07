@@ -7,10 +7,11 @@ This generator creates a new hapi plugin with all the boilerplate you need to ge
 ## Features
 
 - Hapi plugin boilerplate
-- Unit testing and code coverage with [Lab](https://github.com/spumko/lab) and [gulp-lab](https://github.com/otodockal/gulp-lab)
-- Code linting with [gulp-jshint](https://github.com/spenceralger/gulp-jshint)
-- JavaScript code style check with [gulp-jscs](https://github.com/sindresorhus/gulp-jscs) (optional)
-- Npm versioning with [gulp-bump](https://github.com/stevelacy/gulp-bump) (optional)
+- Unit testing and code coverage with [Lab](https://github.com/spumko/lab)
+- Code linting
+- Watch tasks for tests and development server
+- JavaScript code style check (optional)
+- Npm versioning (optional)
 
 
 ## Installation
@@ -30,6 +31,30 @@ yo hapi-plugin
 _Note that this template will generate files in the current directory, so be sure to first change to a new directory if you don't want to overwrite existing files._
 
 
+## Development
+
+Run the following command from the root of the project:
+
+```
+gulp develop
+```
+
+The develop task starts a development hapi server which requires your plugin.
+The server gets restarted on changes made in your project folder.
+
+
+## Release
+
+```
+gulp bump
+```
+
+The bump task increments the plugin version in the package.json file on a patch base.
+You can use the type parameter to specify the type of release:
+
+```
+gulp bump --type (major|minor|patch|prerelease)
+```
 
 ## Contributing
 
