@@ -1,7 +1,7 @@
 {
   "name": "generator-hapi-plugin",
   "description": "A hapi.js plugin generator for Yeoman",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/kwakayama/generator-hapi-plugin",
   "bugs": "https://github.com/kwakayama/generator-hapi-plugin/issues",
   "license": "MIT",
