@@ -38,7 +38,7 @@ module.exports = yeoman.generators.Base.extend({
     }, {
       name: 'description',
       message: 'Description',
-      default: 'The best module ever.'
+      default: 'The best plugin ever.'
     }, {
       name: 'homepage',
       message: 'Homepage'
@@ -165,7 +165,7 @@ module.exports = yeoman.generators.Base.extend({
       prompts[0].choices.push({
         value: pkg.name,
         name: util.format('%s (%s)', pkg.name, pkg.description),
-        checked: true
+        checked: false
       });
     });
 
