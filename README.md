@@ -62,7 +62,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Support
 
-Should you have any problems or wishes for improvements, feel free to open up an [issue](https://github.com/wakayama-io/generator-hapi-plugin).
+Should you have any problems or wishes for improvements, feel free to open up an [issue](https://github.com/wakayama-io/generator-hapi-plugin/issues).
 
 ##Credits
 This generator is based on the [generator-node-gulp](https://github.com/stefanbuck/generator-node-gulp).
