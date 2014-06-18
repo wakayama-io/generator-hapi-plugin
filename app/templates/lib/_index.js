@@ -38,3 +38,9 @@ exports.register = function(plugin, options, next) {
 
   next();
 };
+
+
+exports.register.attributes = {
+
+    pkg: require('../package.json')
+};

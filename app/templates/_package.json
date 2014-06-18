@@ -33,7 +33,7 @@
     "gulp-load-plugins": "^0.5.1",
     "gulp-plumber": "^0.6.2",
     "gulp-lab": "0.0.7",
-    "hapi": "5.x.x",
+    "hapi": "6.x.x",
     "lab": "3.x.x"
   },
   "peerDependencies": {
