@@ -8,18 +8,6 @@
 
 'use strict';
 
-// Following the 'Node.js require(s) best practices' by
-// http://www.mircozeiss.com/node-js-require-s-best-practices/
-
-// // Nodejs libs
-// var fs = require('fs'),
-//
-// // External libs
-// debug = require('debug'),
-//
-// // Internal libs
-// data = require('./data.js');
-
 // Declare internals
 var internals = {};
 
@@ -39,8 +27,6 @@ exports.register = function(plugin, options, next) {
   next();
 };
 
-
 exports.register.attributes = {
-
-    pkg: require('../package.json')
+  pkg: require('../package.json')
 };

@@ -1,7 +1,8 @@
 'use strict';
 
 var Lab = require('lab'),
-  Hapi = require('hapi');
+  Hapi = require('hapi'),
+  Plugin = require('../');
 
 var describe = Lab.experiment;
 var it = Lab.test;
@@ -12,7 +13,7 @@ var after = Lab.after;
 describe('<%= safeSlugname %>', function() {
   var server = new Hapi.Server();
   it('Plugin successfully loads', function(done) {
-    server.pack.require('../', function(err) {
+    server.pack.register(Plugin, function(err) {
 
       expect(err).to.not.exist;
 
@@ -29,11 +30,11 @@ describe('<%= safeSlugname %>', function() {
     done();
   });
 
-  it("Plugin route responses", function(done) {
+  it('Plugin route responses', function(done) {
     var table = server.table();
 
     expect(table).to.have.length(1);
-    expect(table[0].path).to.equal("/");
+    expect(table[0].path).to.equal('/');
 
     var request = {
       method: 'GET',

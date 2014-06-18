@@ -42,6 +42,5 @@ gulp.task('bump', ['test'], function () {
 });
 
 gulp.task('release', ['bump']);
-<% } %>
 
-gulp.task('default', ['test']);
+<% } %>gulp.task('default', ['test']);
