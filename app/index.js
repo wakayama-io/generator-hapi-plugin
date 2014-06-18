@@ -220,7 +220,7 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
 
-  configuring: function () {
+  copyfiles: function () {
     this.copy('index.js', 'index.js');
     this.copy('jshintrc', '.jshintrc');
     this.copy('_gitignore', '.gitignore');
