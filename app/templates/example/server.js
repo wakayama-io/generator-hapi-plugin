@@ -9,10 +9,11 @@
 'use strict';
 
 var Hapi = require('hapi');
+var Plugin = require('../');
 
 var server = new Hapi.Server('localhost', 8000);
 
-server.pack.require('../', function() {
+server.pack.register(Plugin, function() {
     server.start();
     console.log('Server running at ' + server.info.uri);
 });
