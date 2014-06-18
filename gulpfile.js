@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp   = require('gulp');
+var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 var paths = {
