@@ -6,7 +6,8 @@ var plugins = require('gulp-load-plugins')();
 var paths = {
   lint: ['./gulpfile.js', './lib/**/*.js'],
   watch: ['./gulpfile.js', './index.js', './lib/**', './test/**/*.js', '!test/{temp,temp/**}'],
-  tests: ['./test/**/*.js', '!test/{temp,temp/**}']
+  tests: ['./test/**/*.js', '!test/{temp,temp/**}'],
+  source: ['./lib/*.js']
 };
 
 gulp.task('lint', function () {
@@ -16,13 +17,22 @@ gulp.task('lint', function () {
     .pipe(plugins.jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('lab', function () {
-  gulp.src(paths.tests, {cwd: __dirname})
-    .pipe(plugins.plumber())
-    .pipe(plugins.lab('-v -l -c'));
+gulp.task('istanbul', function (cb) {
+  gulp.src(paths.source)
+    .pipe(plugins.istanbul()) // Covering files
+    .on('finish', function () {
+      gulp.src(paths.tests, {cwd: __dirname})
+        .pipe(plugins.plumber())
+        .pipe(plugins.mocha())
+        .pipe(plugins.istanbul.writeReports()) // Creating the reports after tests runned
+        .on('finish', function() {
+          process.chdir(__dirname);
+          cb();
+        });
+    });
 });
 
-gulp.task('test', ['lint', 'lab']);
+gulp.task('test', ['lint', 'istanbul']);
 
 gulp.task('watch', function () {
   gulp.run('test');

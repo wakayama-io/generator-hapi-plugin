@@ -38,8 +38,8 @@ describe('node generator', function () {
       ['lib/index.js', /https:\/\/github.com\/octocat\/mymodule/],
       ['index.js', /module.exports = require\('\.\/lib'\);/],
       ['package.json', /"name": "mymodule"/],
-      ['package.json', /"gulp-lab": "0.0.7"/],
-      ['package.json', /"lab"/],
+      ['package.json', /"gulp-mocha"/],
+      ['package.json', /"gulp-istanbul"/],
       ['package.json', /"hapi"/]
     ];
 
