@@ -21,7 +21,7 @@ describe('<%= slugname %>', function() {
     });
   });
 
-  it('adds a route to /', function(done) {
+  it('adds a route to /hello', function(done) {
     var table;
 
     server.pack.register(plugin, function() {
@@ -30,16 +30,16 @@ describe('<%= slugname %>', function() {
 
       assert.ok(table);
       assert.equal(table.length, 1);
-      assert.equal(table[0].path, '/');
+      assert.equal(table[0].path, '/hello');
 
       done();
     });
   });
 
-  it('responses to GET request on /', function(done) {
+  it('responses to GET request on /hello', function(done) {
     var request = {
       method: 'GET',
-      url: '/'
+      url: '/hello'
     };
 
     server.pack.register(plugin, function() {

@@ -18,9 +18,14 @@ exports.register = function(plugin, options, next) {
 
   plugin.route({
     method: 'GET',
-    path: '/',
+    path: '/hello',
     handler: function(request, reply) {
       reply('don\'t worry, be hapi!');
+    },
+    config:{
+      description: 'Say hello!',
+      notes: ['A route to greet the user'],
+      tags: ['api', 'greeting']
     }
   });
 
